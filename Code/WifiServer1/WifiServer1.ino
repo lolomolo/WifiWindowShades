@@ -1,5 +1,6 @@
 /* Create a WiFi access point and provide a web server on it. */
-// For more details see http://42bots.com.
+/* For more details see http://42bots.com.
+*/
 
 #include <ESP8266WiFi.h>
 #include <ESP8266WebServer.h>
@@ -9,12 +10,12 @@ IPAddress    apIP(42, 42, 42, 42);  // Defining a static IP address: local & gat
 
 /* This are the WiFi access point settings. Update them to your likin */
 const char *ssid = "ESP8266";
-const char *password = "21plkoyr92";
+const char *password = "ESP8266Test";
 
 // Define a web server at port 80 for HTTP
 ESP8266WebServer server(80);
 
-const int ledPin = 2;
+const int ledPin = D1; // an LED is connected to NodeMCU pin D1 (ESP8266 GPIO5) via a 1K Ohm resistor
 
 bool ledState = false;
 
